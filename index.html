@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+          const id = window.location.hash.substring(1);
+          const element = document.getElementById(id);
+          setTimeout(() => {
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 100);
+        }
+      });
+    </script>
+  </body>
+</html>
